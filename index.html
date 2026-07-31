@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ambulance Tracker</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="panel">
+        <header>
+          <p class="eyebrow">Emergency tracking demo</p>
+          <h1>Ambulance Tracker</h1>
+          <p class="subtext">
+            Log a pickup from your location and see where the ambulance is heading next.
+          </p>
+        </header>
+
+        <div class="actions">
+          <button id="locate-btn" type="button">Use my location</button>
+        </div>
+
+        <form id="pickup-form">
+          <label for="ambulance-id">Ambulance ID</label>
+          <input id="ambulance-id" name="ambulance-id" placeholder="e.g. AMB-12" required />
+
+          <label for="patient-name">Patient name</label>
+          <input id="patient-name" name="patient-name" placeholder="Optional" />
+
+          <button type="submit">Log pickup</button>
+        </form>
+
+        <div id="status-card" class="status-card">
+          <h2>Current status</h2>
+          <p>No pickup has been logged yet.</p>
+        </div>
+      </section>
+
+      <section class="panel map-panel">
+        <div id="map"></div>
+      </section>
+    </main>
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="app.js"></script>
+  </body>
+</html>
