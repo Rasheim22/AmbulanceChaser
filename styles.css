@@ -52,11 +52,17 @@ form {
 }
 
 button,
-input {
+input,
+select {
   font: inherit;
   padding: 10px 12px;
   border-radius: 10px;
   border: 1px solid #3c506d;
+}
+
+select {
+  background: #0f172a;
+  color: #f5f7fb;
 }
 
 button {
@@ -76,6 +82,18 @@ button:hover {
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.status-card p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.eta-list {
+  margin: 10px 0 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 6px;
 }
 
 .map-panel {
